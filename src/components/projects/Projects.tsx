@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Image from "next/image";
 
-import img1 from "../../png/web img 1.jpg";
+import img1 from "../../svg/logo-svg.svg";
 import img2 from "../../png/web img 2.jpg";
 import img3 from "../../png/web img 3.jpg";
 import img4 from "../../png/web img 4.jpg";
@@ -68,8 +68,8 @@ const Projects = () => {
             <div className="p-4 rounded-lg bg-gray-800 dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="border rounded-[15px] overflow-hidden bg-[#292e33] transform transition-transform duration-500 ease-in-out hover:-translate-y-2" style={{ boxShadow: "0 4px 6px -1px rgba(16, 229, 234, 0.1), 0 2px 4px -1px rgba(16, 229, 234, 0.06)" }}>
-                  <div className="h-[210px] max-[400px]:h-[170px]">
-                    <Image src={img1} className="w-full h-full object-cover" alt="img1" />
+                  <div className="h-[210px] max-[400px]:h-[170px] bg-white">
+                    <Image src={img1} className="w-full h-full" alt="img1" />
                   </div>
                   <div className="p-4">
                     <h3 className="text-[20px] font-[700]">Flowbite</h3>
