@@ -1,45 +1,76 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Image from "next/image";
-import Link from "next/link";
 
-import about from "../../png/about.jpg";
+import { motion } from "framer-motion";
+import about from "../../png/about-img.png";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const fullText =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates qui perferendis tenetur voluptas ut facere quae esse molestiae sint eos animi maiores omnis, quibusdam porro, voluptate nesciunt architecto nisi id amet enim! Pariatur perspiciatis omnis aperiam distinctio assumenda fugiat provident ducimus sequi nulla suscipit! Non quam consequuntur quos fugit modi!";
+  const truncatedText =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates qui perferendis tenetur voluptas ut facere quae esse molestiae...";
+
+  const handleToggle = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
+
   return (
-    <div id="about" className="text-white px-20 max-sm:px-4 bg-[#292e32] py-6">
-      <h1 className="font-[700] text-[30px] text-center text-[#10e5ea] pb-5 underline">ABOUT US</h1>
-      <div className="flex justify-center gap-10 max-lg:flex-wrap mt-7">
-        <div className="w-[70%] transform transition-transform duration-500 ease-in-out hover:-translate-y-2">
-          <Image src={about} className="w-[100%] rounded-[10px]" alt="about" />
+    <div id="about" className="bg-gradient-to-tr from-[#261c33] via-[#344ab4] to-[#b65881] px-20 max-[1200px]:px-10 max-[450px]:px-3 pb-20 pt-[150px] flex items-center max-[640px]:pt-20 max-[500px]:pt-14 max-[375px]:pt-1">
+      <div className="flex items-center gap-2 max-md:flex-col max-[550px]:items-start">
+        <div ref={ref} className="relative w-[600px] max-[1100px]:w-[500px] max-md:w-[300px] max-[375px]:w-[270px]">
+          <motion.div
+            initial={{ opacity: 0, y: -200 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -200 }}
+            transition={{ type: "spring", stiffness: 50, duration: 1000, delay: 0.9 }}
+          >
+            <h1 className="font-[500] text-[80px] max-[500px]:text-[60px] leading-none italic text-[white] absolute top-[-80px] max-[500px]:top-[-50px] right-[-50px] max-md:right-[-100px] max-[500px]:right-[-28px] z-10 bg-gradient-to-tr from-[#93cedd] to-[#f85dfb] text-transparent bg-clip-text">About <br /> Me</h1>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 200 }}
+            transition={{ type: "spring", stiffness: 50, duration: 1000 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 200 }}
+          >
+            <div className="w-[70px] h-[70px] bg-gradient-to-t from-[#93cedd] to-[#f85dfb] absolute fixed bottom-10" style={{ clipPath: "ellipse(44% 38% at 50% 50%)", }} />
+            <Image src={about} className="w-full h-[400px] max-[1100px]:h-[300px] max-[375px]:h-[270px] rounded-full" alt="about" />
+          </motion.div>
         </div>
-        <div className="px-5">
-          <p className="text-[30px] max-[550px]:text-[20px] font-[600]">Creativity bleeds from the pen of <br /> <span className="font-[600] text-[#7963e0]">inspiration</span></p>
-          <p className="my-5 max-[550px]:text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque omnis accusantium culpa porro labore nam aut?</p>
-          <div className="border px-10 max-sm:px-5 py-5 rounded-[15px]">
-            <div className="flex justify-between gap-5 flex-wrap">
-              <div>
-                <p className="text-[18px] font-[500]">Full Name :</p>
-                <p className="text-[14px]">Saad Ali</p>
-              </div>
-              <div className="mr-[70px]">
-                <p className="text-[18px] font-[500]">Phone No :</p>
-                <p className="text-[14px]">0324 8329019</p>
-              </div>
-            </div>
-            <div className="flex justify-between gap-10 max-[380px]:gap-5 flex-wrap my-3">
-              <div className="max-[380px]:w-full">
-                <p className="text-[18px] font-[500]">Age:</p>
-                <p className="text-[14px]">18 Years</p>
-              </div>
-              <div>
-                <p className="text-[18px] font-[500]">Email:</p>
-                <p className="text-[14px]">saad0306058@gmail.com</p>
-              </div>
-            </div>
-            <p className="text-[18px] font-[500]">Address : </p>
-            <p className="text-[14px]"> Kasur </p>
-          </div>
+        <div className="px-10 max-[820px]:px-3 w-full">
+          <motion.div
+            initial={{ opacity: 0, x: 200 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 200 }}
+            transition={{ type: "spring", stiffness: 50, duration: 1000, delay: 0.3 }}
+          >
+            <p className="text-[35px] max-[1000px]:text-[25px] max-[480px]:text-[20px] text-white font-[600] leading-10 max-[480px]:leading-7">Creativity bleeds from the pen of <br /> <span className="font-[600] text-[#7963e0]">inspiration</span></p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 200 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 200 }}
+            transition={{ type: "spring", stiffness: 50, duration: 1000, delay: 0.3 }}
+          >
+            <p className="my-3 text-gray-300 text-[20px] max-[1000px]:text-[15px] text-ellipsis overflow-hidden line-clamp-5">
+              {isExpanded ? fullText : truncatedText}
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 200 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 200 }}
+            transition={{ type: "spring", stiffness: 50, duration: 1000, delay: 0.9 }}
+          >
+            <button
+              onClick={handleToggle}
+              className="px-4 py-3 bg-[#7963e0] text-white rounded-[10px] text-[20px] hover:bg-[#5a4bb2] transition"
+            >
+              {isExpanded ? "Read Less" : "Read More"}
+            </button>
+          </motion.div>
         </div>
       </div>
     </div>

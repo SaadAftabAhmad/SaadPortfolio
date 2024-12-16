@@ -2,195 +2,214 @@ import React, { useState } from "react";
 
 import Image from "next/image";
 
-import img1 from "../../svg/logo-svg.svg";
-import img2 from "../../png/web img 2.jpg";
-import img3 from "../../png/web img 3.jpg";
-import img4 from "../../png/web img 4.jpg";
-import img5 from "../../png/web img 5.jpg";
-import img6 from "../../png/web img 6.jpg";
+import project1 from "../../svg/project-img-1.svg";
+import project2 from "../../svg/project-img-2.svg";
+import project3 from "../../svg/project-img-3.svg";
+import project4 from "../../svg/project-img-4.svg";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState("all");
-
-  const handleTabClick = (tab: string) => {
-    setActiveTab(tab);
-  };
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
 
   return (
-    <div id="projects" className="text-white px-20 max-sm:px-4 bg-[#292e32] py-6">
-      <h1 className="font-[700] text-[30px] text-center text-[#10e5ea] pb-5 underline">Projects</h1>
-      <div className="rounded-[5px]">
-        <div className="flex justify-center mb-4">
-          <ul className="flex flex-wrap text-sm font-medium text-center" id="default-tab" role="tablist">
-            <li className="me-2" role="presentation">
-              <button
-                className={`inline-block p-4 border-b-2 rounded-t-lg ${activeTab === "all" ? "border-[#10e5ea]" : "hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"}`}
-                onClick={() => handleTabClick("all")}
-                id="profile-tab"
-                type="button"
-                role="tab"
-                aria-controls="profile"
-                aria-selected={activeTab === "all"}
-              >
-                All
-              </button>
-            </li>
-            <li className="me-2" role="presentation">
-              <button
-                className={`inline-block p-4 border-b-2 rounded-t-lg ${activeTab === "product" ? "border-[#10e5ea]" : "hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"}`}
-                onClick={() => handleTabClick("product")}
-                id="dashboard-tab"
-                type="button"
-                role="tab"
-                aria-controls="dashboard"
-                aria-selected={activeTab === "product"}
-              >
-                Product
-              </button>
-            </li>
-            <li className="me-2" role="presentation">
-              <button
-                className={`inline-block p-4 border-b-2 rounded-t-lg ${activeTab === "web page" ? "border-[#10e5ea]" : "hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"}`}
-                onClick={() => handleTabClick("web page")}
-                id="settings-tab"
-                type="button"
-                role="tab"
-                aria-controls="settings"
-                aria-selected={activeTab === "web page"}
-              >
-                Web Page
-              </button>
-            </li>
-          </ul>
-        </div>
-        <div id="default-tab-content">
-          {activeTab === "all" && (
-            <div className="p-4 rounded-lg bg-gray-800 dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="border rounded-[15px] overflow-hidden bg-[#292e33] transform transition-transform duration-500 ease-in-out hover:-translate-y-2" style={{ boxShadow: "0 4px 6px -1px rgba(16, 229, 234, 0.1), 0 2px 4px -1px rgba(16, 229, 234, 0.06)" }}>
-                  <div className="h-[210px] max-[400px]:h-[170px] bg-white">
-                    <Image src={img1} className="w-full h-full" alt="img1" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-[20px] font-[700]">Flowbite</h3>
-                    <p className="text-[15px] font-[300]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor hic dignissimos veritatis voluptate corrupti reprehenderit quo!</p>
-                  </div>
-                </div>
-                <div className="border rounded-[15px] overflow-hidden bg-[#292e33] transform transition-transform duration-500 ease-in-out hover:-translate-y-2" style={{ boxShadow: "0 4px 6px -1px rgba(16, 229, 234, 0.1), 0 2px 4px -1px rgba(16, 229, 234, 0.06)" }}>
-                  <div className="h-[210px] max-[400px]:h-[170px]">
-                    <Image src={img2} className="w-full h-full object-cover" alt="img2" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-[20px] font-[700]">Shadcn</h3>
-                    <p className="text-[15px] font-[300]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor hic dignissimos veritatis voluptate corrupti reprehenderit quo!</p>
-                  </div>
-                </div>
-                <div className="border rounded-[15px] overflow-hidden bg-[#292e33] transform transition-transform duration-500 ease-in-out hover:-translate-y-2" style={{ boxShadow: "0 4px 6px -1px rgba(16, 229, 234, 0.1), 0 2px 4px -1px rgba(16, 229, 234, 0.06)" }}>
-                  <div className="h-[210px] max-[400px]:h-[170px]">
-                    <Image src={img3} className="w-full h-full object-cover" alt="img3" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-[20px] font-[700]">Material UI</h3>
-                    <p className="text-[15px] font-[300]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor hic dignissimos veritatis voluptate corrupti reprehenderit quo!</p>
-                  </div>
-                </div>
-                <div className="border rounded-[15px] overflow-hidden bg-[#292e33] transform transition-transform duration-500 ease-in-out hover:-translate-y-2" style={{ boxShadow: "0 4px 6px -1px rgba(16, 229, 234, 0.1), 0 2px 4px -1px rgba(16, 229, 234, 0.06)" }}>
-                  <div className="h-[210px] max-[400px]:h-[170px]">
-                    <Image src={img4} className="w-full h-full object-cover" alt="img4" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-[20px] font-[700]">Ant Design</h3>
-                    <p className="text-[15px] font-[300]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor hic dignissimos veritatis voluptate corrupti reprehenderit quo!</p>
-                  </div>
-                </div>
-                <div className="border rounded-[15px] overflow-hidden bg-[#292e33] transform transition-transform duration-500 ease-in-out hover:-translate-y-2" style={{ boxShadow: "0 4px 6px -1px rgba(16, 229, 234, 0.1), 0 2px 4px -1px rgba(16, 229, 234, 0.06)" }}>
-                  <div className="h-[210px] max-[400px]:h-[170px]">
-                    <Image src={img5} className="w-full h-full object-cover" alt="img5" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-[20px] font-[700]">Boot strap</h3>
-                    <p className="text-[15px] font-[300]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor hic dignissimos veritatis voluptate corrupti reprehenderit quo!</p>
-                  </div>
-                </div>
-                <div className="border rounded-[15px] overflow-hidden bg-[#292e33] transform transition-transform duration-500 ease-in-out hover:-translate-y-2" style={{ boxShadow: "0 4px 6px -1px rgba(16, 229, 234, 0.1), 0 2px 4px -1px rgba(16, 229, 234, 0.06)" }}>
-                  <div className="h-[210px] max-[400px]:h-[170px]">
-                    <Image src={img6} className="w-full h-full object-cover" alt="img6" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-[20px] font-[700]">Tailwind CSS</h3>
-                    <p className="text-[15px] font-[300]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor hic dignissimos veritatis voluptate corrupti reprehenderit quo!</p>
-                  </div>
-                </div>
+    <div id="projects" className="bg-gradient-to-br from-[#261c33] via-[#344ab4] to-[#b65881] px-10 max-[450px]:px-5 pb-10">
+      <motion.div
+        initial={{ opacity: 0, y: -200 }}
+        className=""
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -200 }}
+        transition={{ type: "spring", stiffness: 50, duration: 1000, delay: 0.3 }}
+      >
+        <h1 className="font-[700] text-[60px] max-[550px]:text-[40px] text-center text-white italic">My Projects</h1>
+      </motion.div>
+      <div ref={ref} className="mt-10 flex flex-col gap-8">
+        <motion.div
+          initial={{ opacity: 0, x: -200 }}
+          className=""
+          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -200 }}
+          transition={{ type: "spring", stiffness: 50, duration: 1000, delay: 0.3 }}
+        >
+          <div className="w-full flex justify-center max-[550px]:justify-start items-end gap-10 max-[800px]:gap-3 pr-[200px] max-[850px]:pr-0">
+            <div className="relative">
+              <Image src={project1} className="w-[200px] max-[450px]:w-[150px] h-[200px] max-[450px]:h-[160px] object-cover rounded-[20px]" alt="project" />
+              <p className="absolute top-5 right-[-50px] text-white text-[20px] text-shadow">Project 1</p>
+            </div>
+            <div className="flex flex-col gap-5 max-[800px]:gap-3 pb-3">
+              <div className="flex gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+              </div>
+              <div className="flex gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+              </div>
+              <div className="flex gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+              </div>
+              <div className="flex gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
               </div>
             </div>
-          )}
-          {activeTab === "product" && (
-            <div className="p-4 rounded-lg bg-gray-800 dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="border rounded-[15px] overflow-hidden bg-[#292e33] transform transition-transform duration-500 ease-in-out hover:-translate-y-2" style={{ boxShadow: "0 4px 6px -1px rgba(16, 229, 234, 0.1), 0 2px 4px -1px rgba(16, 229, 234, 0.06)" }}>
-                  <div className="h-[210px] max-[400px]:h-[170px]">
-                    <Image src={img1} className="w-full h-full object-cover" alt="img1" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-[20px] font-[700]">Flowbite</h3>
-                    <p className="text-[15px] font-[300]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor hic dignissimos veritatis voluptate corrupti reprehenderit quo!</p>
-                  </div>
-                </div>
-                <div className="border rounded-[15px] overflow-hidden bg-[#292e33] transform transition-transform duration-500 ease-in-out hover:-translate-y-2">
-                  <div className="h-[210px] max-[400px]:h-[170px]">
-                    <Image src={img2} className="w-full" alt="img2" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-[20px] font-[700]">Shadcn</h3>
-                    <p className="text-[15px] font-[300]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor hic dignissimos veritatis voluptate corrupti reprehenderit quo!</p>
-                  </div>
-                </div>
-                <div className="border rounded-[15px] overflow-hidden bg-[#292e33] transform transition-transform duration-500 ease-in-out hover:-translate-y-2">
-                  <div className="h-[210px] max-[400px]:h-[170px]">
-                    <Image src={img3} className="w-full" alt="img3" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-[20px] font-[700]">Material UI</h3>
-                    <p className="text-[15px] font-[300]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor hic dignissimos veritatis voluptate corrupti reprehenderit quo!</p>
-                  </div>
-                </div>
-                <div className="border rounded-[15px] overflow-hidden bg-[#292e33] transform transition-transform duration-500 ease-in-out hover:-translate-y-2" style={{ boxShadow: "0 4px 6px -1px rgba(16, 229, 234, 0.1), 0 2px 4px -1px rgba(16, 229, 234, 0.06)" }}>
-                  <div className="h-[210px] max-[400px]:h-[170px]">
-                    <Image src={img5} className="w-full h-full object-cover" alt="img5" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-[20px] font-[700]">Boot strap</h3>
-                    <p className="text-[15px] font-[300]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor hic dignissimos veritatis voluptate corrupti reprehenderit quo!</p>
-                  </div>
-                </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 200 }}
+          className=""
+          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 200 }}
+          transition={{ type: "spring", stiffness: 50, duration: 1000, delay: 0.4 }}
+        >
+          <div className="w-full flex justify-center max-[550px]:justify-end items-start gap-10 max-[800px]:gap-3 pl-[200px] max-[850px]:pl-0">
+            <div className="flex flex-col gap-5 max-[800px]:gap-3 pt-3">
+              <div className="flex gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+              </div>
+              <div className="flex gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+              </div>
+              <div className="flex gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+              </div>
+              <div className="flex gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
               </div>
             </div>
-          )}
-          {activeTab === "web page" && (
-            <div className="p-4 rounded-lg bg-gray-800 dark:bg-gray-800" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="border rounded-[15px] overflow-hidden bg-[#292e33] transform transition-transform duration-500 ease-in-out hover:-translate-y-2">
-                  <div className="h-[210px] max-[400px]:h-[170px]">
-                    <Image src={img4} className="w-full h-full object-cover" alt="img4" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-[20px] font-[700]">Ant Design</h3>
-                    <p className="text-[15px] font-[300]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor hic dignissimos veritatis voluptate corrupti reprehenderit quo!</p>
-                  </div>
-                </div>
-                <div className="border rounded-[15px] overflow-hidden bg-[#292e33] transform transition-transform duration-500 ease-in-out hover:-translate-y-2">
-                  <div className="h-[210px] max-[400px]:h-[170px]">
-                    <Image src={img6} className="w-full h-full object-cover" alt="img6" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-[20px] font-[700]">Tailwind CSS</h3>
-                    <p className="text-[15px] font-[300]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor hic dignissimos veritatis voluptate corrupti reprehenderit quo!</p>
-                  </div>
-                </div>
+            <div className="relative">
+              <Image src={project2} className="w-[350px] max-[550px]:w-[250px] max-[450px]:w-[170px] h-[200px] max-[550px]:h-[170px] max-[450px]:h-[150px] object-cover rounded-[20px]" alt="project" />
+              <p className="absolute bottom-10 left-[-50px] text-white text-[20px] text-shadow">Project 1</p>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -200 }}
+          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -200 }}
+          transition={{ type: "spring", stiffness: 50, duration: 1000, delay: 0.5 }}
+        >
+          <div className="w-full flex justify-center max-[550px]:justify-start items-end gap-10 max-[800px]:gap-3 pr-[200px] max-[850px]:pr-0">
+            <div className="relative">
+              <Image src={project3} className="w-[250px] max-[450px]:w-[200px] h-[180px] max-[450px]:h-[150px] object-cover rounded-[20px]" alt="project" />
+              <p className="absolute top-4 right-[-50px] text-white text-[20px] text-shadow">Project 1</p>
+            </div>
+            <div className="flex gap-5 max-[800px]:gap-3 pb-3">
+              <div className="flex flex-col gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+              </div>
+              <div className="flex flex-col gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+              </div>
+              <div className="flex flex-col gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+              </div>
+              <div className="flex flex-col gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 200 }}
+          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 200 }}
+          transition={{ type: "spring", stiffness: 50, duration: 1000, delay: 0.6 }}
+        >
+          <div className="w-full flex justify-center max-[550px]:justify-end items-end gap-10 max-[800px]:gap-3 pl-[200px] max-[850px]:pl-0">
+            <div className="flex flex-col gap-5 max-[800px]:gap-3 pb-3">
+              <div className="flex gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+              </div>
+              <div className="flex gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+              </div>
+              <div className="flex gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+              </div>
+              <div className="flex gap-5 max-[800px]:gap-3">
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+                <div className="w-2 h-2 bg-[#22186c] rounded-full" />
+              </div>
+            </div>
+            <div className="relative">
+              <Image src={project4} className="w-[230px] max-[450px]:w-[170px] h-[150px] max-[450px]:h-[120px] object-cover rounded-[20px]" alt="project" />
+              <p className="absolute top-4 left-[-50px] text-white text-[20px] text-shadow">Project 1</p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
