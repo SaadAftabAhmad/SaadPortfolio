@@ -10,32 +10,26 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@radix
 const Portfolio = () => {
   return (
     <div className="bg-gradient-to-br from-[#261c33] via-[#344ab4] to-[#b65881] duration-100 h-[100vh] max-[700px]:mb-20">
-      <div className="fixed z-[1020] top-[110px] max-[700px]:top-auto right-10 max-[700px]:right-auto bg-gradient-to-tr from-[#1a1323]/20 to-[#1c366a]/20 py-10 max-[700px]:py-7 px-5 max-[700px]:px-10 max-[375px]:px-5 rounded-[20px] max-[700px]:rounded-t-[50px] max-[700px]:rounded-b-[0px] max-[700px]:bottom-0 max-[700px]:w-full">
+      <div className="fixed z-[1020] top-[110px] max-[700px]:top-auto right-10 max-[700px]:right-auto bg-gradient-to-tr from-[#1a1323]/20 to-[#1c366a]/20 py-10 max-[700px]:py-5 max-[375px]:py-4 px-5 max-[700px]:px-10 max-[375px]:px-5 rounded-[20px] max-[700px]:rounded-t-[30px] max-[375px]:rounded-t-[20px] max-[700px]:rounded-b-[0px] max-[700px]:bottom-0 max-[700px]:w-full">
         <ul className="flex flex-col max-[700px]:flex-row gap-10 max-[700px]:justify-between max-[700px]:w-full" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
           <li role="presentation">
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link href="#home">
-                    <svg className="w-[30px] max-[425px]:w-[25px] h-[30px] max-[425px]:h-[25px]" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-[25px] max-[375px]:w-[22px] h-[25px] max-[375px]:h-[22px]" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M4.17424 11.7664H1.75781L12.6317 1.69531L23.5056 11.7664H21.0892M4.17424 11.7664V19.5995C4.17424 20.193 4.42883 20.7623 4.88199 21.182C5.33516 21.6017 5.94979 21.8375 6.59066 21.8375H18.6728C19.3137 21.8375 19.9283 21.6017 20.3815 21.182C20.8346 20.7623 21.0892 20.193 21.0892 19.5995V11.7664" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                       <path d="M9.0061 21.8368V15.1228C9.0061 14.5292 9.26069 13.96 9.71386 13.5403C10.167 13.1206 10.7817 12.8848 11.4225 12.8848H13.839C14.4798 12.8848 15.0945 13.1206 15.5476 13.5403C16.0008 13.96 16.2554 14.5292 16.2554 15.1228V21.8368" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                   </Link>
                 </TooltipTrigger>
-                <TooltipContent className="bg-gradient-to-bl from-[#93cedd] to-[#f85dfb] text-white px-3 py-2 rounded-[10px] text-[20px] font-[600] absolute right-12">
+                <TooltipContent className="max-[700px]:hidden bg-white text-black px-3 py-2 rounded-[10px] text-[20px] font-[600] absolute right-12">
                   <div className="absolute right-[-12px] top-[15px]">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="17" height="17" viewBox="0 0 292.359 292.359">
-                      <defs>
-                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{ stopColor: "#93cedd", stopOpacity: 1 }} />
-                          <stop offset="100%" style={{ stopColor: "#f85dfb", stopOpacity: 1 }} />
-                        </linearGradient>
-                      </defs>
                       <g>
                         <path
                           d="M222.979,133.331L95.073,5.424C91.456,1.807,87.178,0,82.226,0c-4.952,0-9.233,1.807-12.85,5.424 c-3.617,3.617-5.424,7.898-5.424,12.847v255.813c0,4.948,1.807,9.232,5.424,12.847c3.621,3.617,7.902,5.428,12.85,5.428 c4.949,0,9.23-1.811,12.847-5.428l127.906-127.907c3.614-3.613,5.428-7.897,5.428-12.847 C228.407,141.229,226.594,136.948,222.979,133.331z"
-                          fill="url(#gradient1)"
+                          fill="white"
                         />
                       </g>
                     </svg>
@@ -50,20 +44,14 @@ const Portfolio = () => {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link href="#about">
-                    <svg className="w-[30px] max-[425px]:w-[25px] h-[30px] max-[425px]:h-[25px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-[25px] max-[375px]:w-[22px] h-[25px] max-[375px]:h-[22px]" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
                       <path d="M11 9H13V7H11M12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM11 17H13V11H11V17Z" fill="white" />
                     </svg>
                   </Link>
                 </TooltipTrigger>
-                <TooltipContent className="bg-white text-black px-3 py-2 rounded-[10px] text-[20px] font-[600] absolute right-12">
+                <TooltipContent className="max-[700px]:hidden bg-white text-black px-3 py-2 rounded-[10px] text-[20px] font-[600] absolute right-12">
                   <div className="absolute right-[-12px] top-[15px]">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="17" height="17" viewBox="0 0 292.359 292.359">
-                      <defs>
-                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{ stopColor: "#93cedd", stopOpacity: 1 }} />
-                          <stop offset="100%" style={{ stopColor: "#f85dfb", stopOpacity: 1 }} />
-                        </linearGradient>
-                      </defs>
                       <g>
                         <path
                           d="M222.979,133.331L95.073,5.424C91.456,1.807,87.178,0,82.226,0c-4.952,0-9.233,1.807-12.85,5.424 c-3.617,3.617-5.424,7.898-5.424,12.847v255.813c0,4.948,1.807,9.232,5.424,12.847c3.621,3.617,7.902,5.428,12.85,5.428 c4.949,0,9.23-1.811,12.847-5.428l127.906-127.907c3.614-3.613,5.428-7.897,5.428-12.847 C228.407,141.229,226.594,136.948,222.979,133.331z"
@@ -82,22 +70,16 @@ const Portfolio = () => {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link href="#project">
-                    <svg className="w-[30px] max-[425px]:w-[25px] h-[30px] max-[425px]:h-[25px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-[25px] max-[375px]:w-[22px] h-[25px] max-[375px]:h-[22px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 7C12.5523 7 13 6.55228 13 6C13 5.44772 12.5523 5 12 5C11.4477 5 11 5.44772 11 6C11 6.55228 11.4477 7 12 7Z" fill="white" />
                       <path d="M6 17H18V19H6V17ZM10 11.83L12.792 14.624L16.724 10.689L18 12V8H14L15.31 9.275L12.791 11.794L10 9L6 13L7.414 14.414L10 11.83Z" fill="white" />
                       <path d="M19 3.00007H15.702C15.603 2.85282 15.4961 2.71096 15.382 2.57507L15.372 2.56307C14.637 1.70764 13.6034 1.16475 12.482 1.04507C12.1635 0.984977 11.8365 0.984977 11.518 1.04507C10.3966 1.16475 9.36298 1.70764 8.628 2.56307L8.618 2.57507C8.5039 2.71063 8.39708 2.85216 8.298 2.99907V3.00007H5C4.20459 3.00086 3.44199 3.31719 2.87956 3.87963C2.31712 4.44206 2.00079 5.20466 2 6.00007V20.0001C2.00079 20.7955 2.31712 21.5581 2.87956 22.1205C3.44199 22.6829 4.20459 22.9993 5 23.0001H19C19.7954 22.9993 20.558 22.6829 21.1204 22.1205C21.6829 21.5581 21.9992 20.7955 22 20.0001V6.00007C21.9992 5.20466 21.6829 4.44206 21.1204 3.87963C20.558 3.31719 19.7954 3.00086 19 3.00007ZM20 20.0001C20 20.2653 19.8946 20.5196 19.7071 20.7072C19.5196 20.8947 19.2652 21.0001 19 21.0001H5C4.73478 21.0001 4.48043 20.8947 4.29289 20.7072C4.10536 20.5196 4 20.2653 4 20.0001V6.00007C4 5.73485 4.10536 5.4805 4.29289 5.29296C4.48043 5.10543 4.73478 5.00007 5 5.00007H9.55C9.66476 4.43492 9.97136 3.92683 10.4179 3.56188C10.8644 3.19693 11.4233 2.99756 12 2.99756C12.5767 2.99756 13.1356 3.19693 13.5821 3.56188C14.0286 3.92683 14.3352 4.43492 14.45 5.00007H19C19.2652 5.00007 19.5196 5.10543 19.7071 5.29296C19.8946 5.4805 20 5.73485 20 6.00007V20.0001Z" fill="white" />
                     </svg>
                   </Link>
                 </TooltipTrigger>
-                <TooltipContent className="bg-white text-black px-3 py-2 rounded-[10px] text-[20px] font-[600] absolute right-12 whitespace-nowrap">
+                <TooltipContent className="max-[700px]:hidden bg-white text-black px-3 py-2 rounded-[10px] text-[20px] font-[600] absolute right-12 max-[700px]:right-[-50px] max-[700px]:top-[-60px] whitespace-nowrap">
                   <div className="absolute right-[-12px] top-[15px]">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="17" height="17" viewBox="0 0 292.359 292.359">
-                      <defs>
-                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{ stopColor: "#93cedd", stopOpacity: 1 }} />
-                          <stop offset="100%" style={{ stopColor: "#f85dfb", stopOpacity: 1 }} />
-                        </linearGradient>
-                      </defs>
                       <g>
                         <path
                           d="M222.979,133.331L95.073,5.424C91.456,1.807,87.178,0,82.226,0c-4.952,0-9.233,1.807-12.85,5.424 c-3.617,3.617-5.424,7.898-5.424,12.847v255.813c0,4.948,1.807,9.232,5.424,12.847c3.621,3.617,7.902,5.428,12.85,5.428 c4.949,0,9.23-1.811,12.847-5.428l127.906-127.907c3.614-3.613,5.428-7.897,5.428-12.847 C228.407,141.229,226.594,136.948,222.979,133.331z"
@@ -116,21 +98,15 @@ const Portfolio = () => {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link href="#skill">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-[30px] max-[425px]:w-[25px] h-[30px] max-[425px]:h-[25px]" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-[25px] max-[375px]:w-[22px] h-[25px] max-[375px]:h-[22px]" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
                       viewBox="0 0 512 512">
                       <path fill="white" fill-rule="nonzero" d="M423.51 61.53c-5.02,-5.03 -10.92,-7.51 -17.75,-7.51 -6.82,0 -12.8,2.48 -17.75,7.51l-27.05 26.97c-7.25,-4.7 -14.93,-8.8 -22.95,-12.47 -8.02,-3.67 -16.22,-6.82 -24.5,-9.55l0 -41.48c0,-7 -2.38,-12.89 -7.25,-17.75 -4.86,-4.86 -10.75,-7.25 -17.75,-7.25l-52.05 0c-6.66,0 -12.45,2.39 -17.49,7.25 -4.95,4.86 -7.43,10.75 -7.43,17.75l0 37.98c-8.7,2.04 -17.15,4.6 -25.26,7.76 -8.19,3.16 -15.95,6.74 -23.29,10.75l-29.96 -29.53c-4.69,-4.94 -10.4,-7.5 -17.32,-7.5 -6.83,0 -12.71,2.56 -17.75,7.5l-36.43 36.54c-5.03,5.03 -7.51,10.92 -7.51,17.73 0,6.83 2.48,12.81 7.51,17.75l26.97 27.06c-4.7,7.26 -8.79,14.93 -12.46,22.95 -3.68,8.02 -6.83,16.22 -9.56,24.49l-41.47 0c-7.01,0 -12.9,2.39 -17.76,7.26 -4.86,4.86 -7.25,10.75 -7.25,17.75l0 52.05c0,6.65 2.39,12.46 7.25,17.5 4.86,4.94 10.75,7.42 17.76,7.42l37.97 0c2.04,8.7 4.6,17.15 7.76,25.25 3.17,8.2 6.75,16.13 10.75,23.81l-29.52 29.44c-4.95,4.7 -7.51,10.41 -7.51,17.33 0,6.82 2.56,12.71 7.51,17.75l36.53 36.95c5.03,4.69 10.92,7 17.75,7 6.82,0 12.79,-2.31 17.75,-7l27.04 -27.48c7.26,4.69 14.94,8.78 22.96,12.46 8.02,3.66 16.21,6.83 24.49,9.55l0 41.48c0,7 2.39,12.88 7.25,17.74 4.86,4.87 10.76,7.26 17.75,7.26l52.05 0c6.66,0 12.46,-2.39 17.5,-7.26 4.94,-4.86 7.42,-10.74 7.42,-17.74l0 -37.98c8.7,-2.04 17.15,-4.6 25.25,-7.76 8.2,-3.16 16.14,-6.74 23.81,-10.75l29.44 29.53c4.7,4.95 10.49,7.5 17.51,7.5 7.07,0 12.87,-2.55 17.57,-7.5l36.95 -36.53c4.69,-5.04 7,-10.92 7,-17.75 0,-6.82 -2.31,-12.8 -7,-17.75l-27.48 -27.05c4.7,-7.26 8.79,-14.93 12.46,-22.96 3.66,-8.01 6.83,-16.21 9.56,-24.49l41.47 0c7,0 12.88,-2.4 17.74,-7.25 4.87,-4.87 7.26,-10.75 7.26,-17.75l0 -52.05c0,-6.66 -2.39,-12.45 -7.26,-17.5 -4.86,-4.95 -10.74,-7.42 -17.74,-7.42l-37.98 0c-2.04,-8.36 -4.6,-16.73 -7.76,-25 -3.16,-8.37 -6.74,-16.21 -10.75,-23.56l29.53 -29.95c4.95,-4.69 7.5,-10.41 7.5,-17.32 0,-6.83 -2.55,-12.71 -7.5,-17.75l-36.53 -36.43zm-48.41 257.98c-22.72,42.52 -67.54,71.44 -119.1,71.44 -51.58,0 -96.37,-28.92 -119.09,-71.42 2.66,-11.61 7.05,-21.74 19.9,-28.84 17.76,-9.89 48.34,-9.15 62.89,-22.24l20.1 52.78 10.1 -28.77 -4.95 -5.42c-3.72,-5.44 -2.44,-11.62 4.46,-12.74 2.33,-0.37 4.95,-0.14 7.47,-0.14 2.69,0 5.68,-0.25 8.22,0.32 6.41,1.41 7.07,7.62 3.88,12.56l-4.95 5.42 10.11 28.77 18.18 -52.78c13.12,11.8 48.43,14.18 62.88,22.24 12.89,7.22 17.26,17.24 19.9,28.82zm-159.11 -86.45c-1.82,0.03 -3.31,-0.2 -4.93,-1.1 -2.15,-1.19 -3.67,-3.24 -4.7,-5.55 -2.17,-4.86 -3.89,-17.63 1.57,-21.29l-1.02 -0.66 -0.11 -1.41c-0.21,-2.57 -0.26,-5.68 -0.32,-8.95 -0.2,-12 -0.45,-26.56 -10.37,-29.47l-4.25 -1.26 2.81 -3.38c8.01,-9.64 16.38,-18.07 24.82,-24.54 9.55,-7.33 19.26,-12.2 28.75,-13.61 9.77,-1.44 19.23,0.75 27.97,7.62 2.57,2.03 5.08,4.48 7.5,7.33 9.31,0.88 16.94,5.77 22.38,12.75 3.24,4.16 5.71,9.09 7.29,14.33 1.56,5.22 2.24,10.77 1.95,16.23 -0.53,9.8 -4.2,19.35 -11.61,26.33 1.3,0.04 2.53,0.33 3.61,0.91 4.14,2.15 4.27,6.82 3.19,10.75 -1.08,3.28 -2.44,7.08 -3.73,10.28 -1.56,4.31 -3.85,5.12 -8.27,4.65 -9.93,43.45 -69.98,44.93 -82.53,0.04zm40.01 -135.69c87.64,0 158.63,71.04 158.63,158.63 0,87.64 -71.04,158.63 -158.63,158.63 -87.63,0 -158.63,-71.04 -158.63,-158.63 0,-87.64 71.04,-158.63 158.63,-158.63z" />
                     </svg>
                   </Link>
                 </TooltipTrigger>
-                <TooltipContent className="bg-white text-black px-3 py-2 rounded-[10px] text-[20px] font-[600] absolute right-12 whitespace-nowrap">
+                <TooltipContent className="max-[700px]:hidden bg-white text-black px-3 py-2 rounded-[10px] text-[20px] font-[600] absolute right-12 whitespace-nowrap">
                   <div className="absolute right-[-12px] top-[15px]">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="17" height="17" viewBox="0 0 292.359 292.359">
-                      <defs>
-                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" style={{ stopColor: "#93cedd", stopOpacity: 1 }} />
-                          <stop offset="100%" style={{ stopColor: "#f85dfb", stopOpacity: 1 }} />
-                        </linearGradient>
-                      </defs>
                       <g>
                         <path
                           d="M222.979,133.331L95.073,5.424C91.456,1.807,87.178,0,82.226,0c-4.952,0-9.233,1.807-12.85,5.424 c-3.617,3.617-5.424,7.898-5.424,12.847v255.813c0,4.948,1.807,9.232,5.424,12.847c3.621,3.617,7.902,5.428,12.85,5.428 c4.949,0,9.23-1.811,12.847-5.428l127.906-127.907c3.614-3.613,5.428-7.897,5.428-12.847 C228.407,141.229,226.594,136.948,222.979,133.331z"
@@ -306,34 +282,3 @@ export default Portfolio;
 //   <Home />
 //   <About />
 // </div>
-
-
-
-
-
-
-// import React from "react";
-
-// import Navbar from "@/components/navbar/Navbar";
-// import Home from "@/components/home/Home";
-// import About from "@/components/about/About";
-// import Contact from "@/components/contact/Contact";
-// import Services from "@/components/services/Services";
-// import Projects from "@/components/projects/Projects";
-// import Footer from "@/components/footer/Footer";
-
-// const Portfolio = () => {
-//   return (
-//     <div className="dark:bg-gradient-to-br from-[#261c33] via-[#344ab4] to-[#b65881] dark:text-light duration-100 h-[100vh] w-[100vw]">
-//       <Navbar/>
-//       {/* <Home/> */}
-//       {/* <About/> */}
-//       {/* <Services/> */}
-//       {/* <Projects/> */}
-//       {/* <Contact/> */}
-//       {/* <Footer/> */}
-//     </div>
-//   );
-// };
-
-// export default Portfolio;
