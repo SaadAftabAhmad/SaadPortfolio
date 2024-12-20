@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
           y,
           width: 15,
           height: 15,
-          borderRadius: "50%",
+          borderRadius: "100%",
           position: "fixed",
           pointerEvents: "none",
           boxShadow: "0px 180px 200px rgba(0, 0, 0, 0.6), 0px 5px 10px rgba(0, 0, 0, 0.4)",

@@ -18,7 +18,7 @@ const MySkills = () => {
           </div>
         </div>
       </div>
-      <div ref={ref} className="grid grid-cols-2 max-[550px]:grid-cols-1 gap-10 max-[870px]:gap-3 pl-[550px] max-[1230px]:pl-[350px] max-[950px]:pl-[250px] max-[830px]:pl-[50px] max-[375px]:px-[30px] pt-[120px] max-[830px]:pt-[250px] max-[550px]:pt-[180px]">
+      <div ref={ref} className="grid grid-cols-3 max-[550px]:grid-cols-1 gap-10 max-[870px]:gap-3 pl-[350px] max-[1230px]:pl-[350px] max-[950px]:pl-[250px] max-[830px]:pl-[50px] max-[375px]:px-[30px] pt-[120px] max-[830px]:pt-[250px] max-[550px]:pt-[180px]">
         {/* HTML */}
         <div className="flex items-center gap-4 group">
           <motion.div

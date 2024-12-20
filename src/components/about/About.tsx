@@ -23,23 +23,22 @@ const About = () => {
   });
 
   return (
-    <div id="about" className="bg-gradient-to-tr from-[#261c33] via-[#344ab4] to-[#b65881] px-20 max-[1200px]:px-10 max-[450px]:px-3 pb-20 pt-[150px] flex items-center max-[640px]:pt-20 max-[500px]:pt-14 max-[375px]:pt-1">
-      <div className="flex items-center gap-2 max-md:flex-col max-[550px]:items-start">
-        <div ref={ref} className="relative w-[600px] max-[1100px]:w-[500px] max-md:w-[300px] max-[375px]:w-[270px]">
+    <div id="about" className="bg-gradient-to-tr from-[#261c33] via-[#344ab4] to-[#b65881] px-20 max-[1200px]:px-10 max-md:px-5 max-[450px]:px-3 pb-20 pt-[100px] max-md:pt-[70px] flex items-center max-[640px]:pt-20 max-[500px]:pt-14 max-[375px]:pt-1">
+      <div className="flex items-center gap-2 max-[700px]:flex-col max-[540px]:items-start">
+        <div ref={ref} className="relative w-[600px] max-[1100px]:w-[500px] max-[700px]:w-[300px] max-[425px]:w-[270px] max-[375px]:w-[240px]">
           <motion.div
             initial={{ opacity: 0, y: -200 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -200 }}
             transition={{ type: "spring", stiffness: 50, duration: 1000, delay: 0.9 }}
           >
-            <h1 className="font-[500] text-[80px] max-[500px]:text-[60px] leading-none italic text-[white] absolute top-[-80px] max-[500px]:top-[-50px] right-[-50px] max-md:right-[-100px] max-[500px]:right-[-28px] z-10 bg-gradient-to-tr from-[#93cedd] to-[#f85dfb] text-transparent bg-clip-text">About <br /> Me</h1>
+            <h1 className="font-[500] text-[80px] max-md:text-[70px] max-[500px]:text-[60px] max-[375px]:text-[50px] leading-none italic text-[white] absolute top-[-80px] max-[500px]:top-[-50px] right-[-50px] max-[700px]:right-[-100px] max-[500px]:right-[-28px] z-10">About <br /> Me</h1>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 200 }}
             transition={{ type: "spring", stiffness: 50, duration: 1000 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 200 }}
           >
-            <div className="w-[70px] h-[70px] bg-gradient-to-t from-[#93cedd] to-[#f85dfb] absolute fixed bottom-10" style={{ clipPath: "ellipse(44% 38% at 50% 50%)", }} />
-            <Image src={about} className="w-full h-[400px] max-[1100px]:h-[300px] max-[375px]:h-[270px] rounded-full" alt="about" />
+            <Image src={about} className="w-full h-[400px] max-[1100px]:h-[300px] max-[425px]:h-[270px] max-[375px]:h-[240px] rounded-full" alt="about" />
           </motion.div>
         </div>
         <div className="px-10 max-[820px]:px-3 w-full">
@@ -48,7 +47,7 @@ const About = () => {
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 200 }}
             transition={{ type: "spring", stiffness: 50, duration: 1000, delay: 0.3 }}
           >
-            <p className="text-[35px] max-[1000px]:text-[25px] max-[480px]:text-[20px] text-white font-[600] leading-10 max-[480px]:leading-7">Creativity bleeds from the pen of <br /> <span className="font-[600] text-[#7963e0]">inspiration</span></p>
+            <p className="text-[35px] max-[1000px]:text-[25px] max-md:text-[22px] max-[480px]:text-[20px] text-white font-[600] leading-10 max-[480px]:leading-7">Creativity bleeds from the pen of <br /> <span className="font-[600] text-[#7963e0]">inspiration</span></p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 200 }}
