@@ -29,7 +29,7 @@ const Home = () => {
           >
             <div className="relative">
               <div className="w-[10px] h-[10px] rounded-full bg-gradient-to-bl from-[#93cedd] to-[#f85dfb] absolute bottom-[-9px] left-[-3.5px]" />
-              <p className="font-[500] text-[35px] max-[850px]:text-[25px] max-[550px]:text-[20px] mt-14 max-[550px]:mt-8 bg-gradient-to-bl from-[#93cedd] to-[#f85dfb] pl-3 text-transparent bg-clip-text border-l-[4px] border-gradient-to-bl border-l-[#93cedd]/75 border-l-[#f85dfb]/75">I'm a UI/UX <br /> Developer</p>
+              <p className="font-[500] text-[35px] max-[850px]:text-[25px] max-[550px]:text-[20px] mt-14 max-[550px]:mt-8 bg-gradient-to-bl from-[#93cedd] to-[#f85dfb] pl-3 text-transparent bg-clip-text border-l-[4px] border-gradient-to-bl border-l-[#93cedd]/75 border-l-[#f85dfb]/75">I&apos;m a UI/UX <br /> Developer</p>
             </div>
           </motion.div>
         </div>
