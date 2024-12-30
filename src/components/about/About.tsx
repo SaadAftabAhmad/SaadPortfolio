@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import Image from "next/image";
-
 import { motion } from "framer-motion";
 import about from "../../png/about-img.png";
 import { useInView } from "react-intersection-observer";

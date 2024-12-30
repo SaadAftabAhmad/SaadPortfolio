@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const MySkills = () => {
-
   const { ref, inView } = useInView({
     threshold: 0.2,
   });

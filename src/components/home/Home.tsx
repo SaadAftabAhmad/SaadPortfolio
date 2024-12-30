@@ -1,4 +1,5 @@
 import React from "react";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import developer from "../../png/portfolio-img.png";
